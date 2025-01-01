@@ -1,4 +1,3 @@
-# 💤 LazyVim
+# LazyVim based config for web development
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Link to [LazyVim](https://github.com/LazyVim/LazyVim).
