@@ -1,0 +1,44 @@
+return {}
+-- return {
+--   "saghen/blink.cmp",
+--   enabled = true,
+--   opts = {
+--     sources = {
+--       default = { "lsp", "path", "snippets", "buffer", "copilot", "luasnip" }, --"dadbod"
+--       providers = {
+--         lsp = {
+--           name = "lsp",
+--           enabled = true,
+--           module = "blink.cmp.sources.lsp",
+--           kind = "LSP",
+--           score_offset = 1000,
+--         },
+--         luasnip = {
+--           name = "luasnip",
+--           enabled = true,
+--           module = "blink.cmp.sources.luasnip",
+--           score_offset = 950,
+--         },
+--         snippets = {
+--           name = "snippets",
+--           enabled = true,
+--           module = "blink.cmp.sources.snippets",
+--           score_offset = 900,
+--         },
+--         dadbod = {
+--           name = "DadBod",
+--           module = "vim_dadbod_completion.blink",
+--           score_offset = 950,
+--         },
+--         copilot = {
+--           name = "copilot",
+--           enabled = true,
+--           module = "blink-cmp-copilot",
+--           kind = "Copilot",
+--           score_offset = -100,
+--           async = true,
+--         },
+--       },
+--     },
+--   },
+-- }
