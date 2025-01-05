@@ -12,7 +12,7 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- C nfigure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
