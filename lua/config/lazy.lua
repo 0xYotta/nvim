@@ -52,3 +52,4 @@ require("lazy").setup({
     },
   },
 })
+vim.opt.smoothscroll = false
