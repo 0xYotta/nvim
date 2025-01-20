@@ -11,6 +11,7 @@ return {
         S = { icon = ">=", color = "#a550fa" },
         N = { icon = " #", color = "#00ffaa" },
         I = { icon = " !", color = "#ff6924" },
+        WTF = { icon = " ?", color = "#ff0f4b" },
       }
     end,
   },
@@ -20,6 +21,7 @@ return {
 -- S: section
 -- N: name
 -- I: important
+--WTF: WTF???
 
 --#00ffaa
 --#5afaef

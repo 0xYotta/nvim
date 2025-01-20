@@ -10,6 +10,12 @@ return {
 
   {
     "eldritch-theme/eldritch.nvim",
+    config = function()
+      require("eldritch").setup({
+        palette = "default",
+        terminal_colors = true,
+      })
+    end,
   },
 
   {
@@ -79,7 +85,15 @@ return {
       require("onedark").setup(opts)
     end,
   },
-
+  {
+    "EdenEast/nightfox.nvim",
+  },
+  {
+    "haize-uwu/sweet.nvim",
+    lazy = false,
+    priority = 1000,
+    name = "sweet",
+  },
   {
     "LazyVim/LazyVim",
     opts = {
