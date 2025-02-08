@@ -1,4 +1,10 @@
 # 💤 LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Neovim configuration for web-development, primary front-end.
+
+## Features
+
+- TODO comments with custom highlightings
+- Auto sessions
+- Custom formatting for jsx/tsx files
+- Much more coming soon
