@@ -78,8 +78,8 @@ return {
       term_colors = true,
       ending_tildes = true,
 
-      -- toggle_style_key = "<leader>uu",
-      -- toggle_style_list = { "cool", "deep" },
+      toggle_style_key = "<leader>uu",
+      toggle_style_list = { "deep" },
     },
     config = function(_, opts)
       require("onedark").setup(opts)
@@ -94,10 +94,12 @@ return {
     priority = 1000,
     name = "sweet",
   },
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "mistweaverco/retro-theme.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-moon",
+      colorscheme = "onedark",
     },
   },
 }
