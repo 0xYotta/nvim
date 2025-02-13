@@ -79,7 +79,7 @@ return {
       ending_tildes = true,
 
       toggle_style_key = "<leader>uu",
-      toggle_style_list = { "deep" },
+      toggle_style_list = { "deep", "cool" },
     },
     config = function(_, opts)
       require("onedark").setup(opts)
@@ -94,12 +94,41 @@ return {
     priority = 1000,
     name = "sweet",
   },
-  { "rose-pine/neovim", name = "rose-pine" },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        styles = {
+          italic = false,
+        },
+      })
+    end,
+  },
   { "mistweaverco/retro-theme.nvim" },
+  {
+    "Sly-Harvey/radium.nvim",
+  },
+  {
+    "zootedb0t/citruszest.nvim",
+    lazy = false,
+    config = function()
+      require("citruszest").setup({
+        transparent = true,
+        italic = false,
+      })
+      -- local lualine = require("lualine")
+      -- lualine.setup({
+      --   options = {
+      --     theme = "citruszest",
+      --   },
+      -- })
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "tokyonight-moon",
     },
   },
 }
