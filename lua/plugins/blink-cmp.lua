@@ -59,15 +59,14 @@ return {
       },
       -- experimental signature help support
       -- signature = { enabled = true },
-
-      sources = {
-        -- adding any nvim-cmp sources here will enable them
-        -- with blink.compat
-        compat = {},
-        default = { "lsp", "path", "snippets", "buffer" },
-        cmdline = {},
+      cmdline = {
+        sources = {
+          -- adding any nvim-cmp sources here will enable them
+          -- with blink.compat
+          compat = {},
+          default = { "lsp", "path", "snippets", "buffer" },
+        },
       },
-
       --NOTE: disabling LazyVim's default map ('enter' for completion)
       keymap = {
         preset = "default",
