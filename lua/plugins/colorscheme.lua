@@ -126,9 +126,16 @@ return {
     end,
   },
   {
+    "neko-night/nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function() end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-moon",
+      colorscheme = "eldritch",
     },
   },
 }
