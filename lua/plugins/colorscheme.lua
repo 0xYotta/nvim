@@ -1,11 +1,11 @@
+vim.opt.termguicolors = true
+
+local g = vim.g
+
 return {
 
   {
     "ellisonleao/gruvbox.nvim",
-  },
-
-  {
-    "rebelot/kanagawa.nvim",
   },
 
   {
@@ -18,82 +18,9 @@ return {
     end,
   },
 
-  {
-    "maxmx03/fluoromachine.nvim",
-    lazy = false,
-    config = function()
-      local fm = require("fluoromachine")
-
-      fm.setup({
-        glow = false,
-        theme = "fluoromachine",
-        transparent = false,
-      })
-    end,
-  },
-
-  {
-    "0xstepit/flow.nvim",
-    lazy = false,
-    tag = "v2.0.1",
-    opts = {
-      theme = {
-        style = "dark",
-        contrast = "default",
-        transparent = false,
-      },
-      colors = {
-        mode = "light",
-        fluo = "pink",
-        custom = {
-          saturation = "100",
-        },
-      },
-      ui = {
-        borders = "fluo",
-        aggressive_spell = true,
-      },
-      -- Your configuration options here.
-    },
-  },
-
-  {
-    "sho-87/kanagawa-paper.nvim",
-    lazy = false,
-    priority = 999,
-    opts = {},
-  },
-
-  {
-    "cpea2506/one_monokai.nvim",
-  },
-
   { "sekke276/dark_flat.nvim" },
 
-  {
-    "navarasu/onedark.nvim",
-    priority = 1000,
-    opts = {
-      style = "deep",
-      term_colors = true,
-      ending_tildes = true,
-
-      toggle_style_key = "<leader>uu",
-      toggle_style_list = { "deep", "cool" },
-    },
-    config = function(_, opts)
-      require("onedark").setup(opts)
-    end,
-  },
-  {
-    "EdenEast/nightfox.nvim",
-  },
-  {
-    "haize-uwu/sweet.nvim",
-    lazy = false,
-    priority = 1000,
-    name = "sweet",
-  },
+  { "haize-uwu/sweet.nvim", lazy = false, priority = 1000, name = "sweet" },
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -110,32 +37,37 @@ return {
     "Sly-Harvey/radium.nvim",
   },
   {
-    "zootedb0t/citruszest.nvim",
+    "sainnhe/sonokai",
     lazy = false,
     config = function()
-      require("citruszest").setup({
-        transparent = true,
-        italic = false,
-      })
-      -- local lualine = require("lualine")
-      -- lualine.setup({
-      --   options = {
-      --     theme = "citruszest",
-      --   },
-      -- })
+      g.sonokai_style = "andromeda"
+      g.sonokai_menu_selection_background = "red"
+      g.sonokai_diagnostic_virtual_text = "colored"
     end,
   },
   {
-    "neko-night/nvim",
+    "sainnhe/everforest",
     lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function() end,
+    config = function()
+      g.everforest_background = "hard"
+      g.everforest_ui_contrast = "high"
+      g.everforest_diagnostic_virtual_text = "colored"
+    end,
   },
+  {
+    "sainnhe/gruvbox-material",
+    lazy = false,
+    config = function()
+      g.gruvbox_material_background = "hard"
+      g.gruvbox_material_foreground = "mix"
+      g.gruvbox_material_ui_contrast = "low"
+    end,
+  },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "eldritch",
+      colorscheme = "gruvbox-material",
     },
   },
 }
