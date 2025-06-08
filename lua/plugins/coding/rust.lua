@@ -9,34 +9,22 @@ return {
       },
     },
   },
+
   -- {
   --   "cordx56/rustowl",
   --   dependencies = { "neovim/nvim-lspconfig" },
-  --   --   config = function()
-  --   --     require("lspconfig").rustowl.setup({
-  --   --       trigger = {
-  --   --         hover = false,
-  --   --       },
-  --   --     })
-  --   --   end,
-  --   --   vim.keymap.set("n", "<c-o>", require("rustowl").rustowl_cursor, { noremap = true, silent = true }),
+  --   config = function()
+  --     local lspconfig = require("lspconfig")
+  --
+  --     -- Настройка rustowl LSP
+  --     lspconfig.rustowl.setup({
+  --       trigger = {
+  --         hover = false,
+  --       },
+  --     })
+  --
+  --     -- Установка keymap для rustowl_cursor
+  --     vim.keymap.set("n", "<C-o>", require("rustowl").rustowl_cursor, { noremap = true, silent = true })
+  --   end,
   -- },
-
-  {
-    "cordx56/rustowl",
-    dependencies = { "neovim/nvim-lspconfig" },
-    config = function()
-      local lspconfig = require("lspconfig")
-
-      -- Настройка rustowl LSP
-      lspconfig.rustowl.setup({
-        trigger = {
-          hover = false,
-        },
-      })
-
-      -- Установка keymap для rustowl_cursor
-      vim.keymap.set("n", "<C-o>", require("rustowl").rustowl_cursor, { noremap = true, silent = true })
-    end,
-  },
 }

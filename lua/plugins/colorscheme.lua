@@ -32,7 +32,6 @@ return {
       })
     end,
   },
-  { "mistweaverco/retro-theme.nvim" },
   {
     "Sly-Harvey/radium.nvim",
   },
@@ -51,23 +50,30 @@ return {
     config = function()
       g.everforest_background = "hard"
       g.everforest_ui_contrast = "high"
-      g.everforest_diagnostic_virtual_text = "colored"
+      g.everforest_diagnostic_virtual_text = "highlighted"
     end,
   },
   {
     "sainnhe/gruvbox-material",
     lazy = false,
     config = function()
-      g.gruvbox_material_background = "hard"
+      g.gruvbox_material_background = "medium"
       g.gruvbox_material_foreground = "mix"
-      g.gruvbox_material_ui_contrast = "low"
+      g.gruvbox_material_ui_contrast = "high"
+      g.gruvbox_material_menu_selection_background = "aqua"
+      g.gruvbox_material_diagnostic_virtual_text = "highlighted"
+      g.gruvbox_material_better_performance = 1
     end,
   },
 
   {
+    "Yazeed1s/oh-lucy.nvim",
+  },
+  { "EdenEast/nightfox.nvim" },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
