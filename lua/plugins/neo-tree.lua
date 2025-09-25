@@ -16,7 +16,7 @@ return {
           visible = false,
           hide_dotfiles = true,
           always_show = {
-            "node_modules",
+            -- "node_modules",
             ".gitignore",
           },
         },

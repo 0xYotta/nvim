@@ -13,3 +13,8 @@ local delete = vim.keymap.del
 -- Could make this buttons for navigating in blink cmp
 vim.keymap.set("n", "<PageUp>", "<C-u>", { noremap = true, silent = true })
 vim.keymap.set("n", "<PageDown>", "<C-d>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>sf", function()
+  -- F for "Fixed" string search
+  require("telescope.builtin").live_grep({ additional_args = { "-F" } })
+end, { desc = "[S]earch [F]ixed String in Files" })
