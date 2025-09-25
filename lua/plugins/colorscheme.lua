@@ -70,10 +70,11 @@ return {
     "Yazeed1s/oh-lucy.nvim",
   },
   { "EdenEast/nightfox.nvim" },
+  -- Lua
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "tokyonight-moon",
     },
   },
 }

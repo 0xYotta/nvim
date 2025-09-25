@@ -6,3 +6,5 @@ vim.opt.scrolloff = 15
 
 vim.opt.list = false --NOTE: disabled
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+vim.o.foldexpr = "LazyVim.treesitter.foldexpr()"
