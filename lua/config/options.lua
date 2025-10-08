@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.scrolloff = 15
+vim.opt.sidescrolloff = 5
 
 vim.opt.list = false --NOTE: disabled
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
