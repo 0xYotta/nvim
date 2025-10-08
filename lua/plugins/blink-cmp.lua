@@ -10,15 +10,14 @@ return {
     },
     dependencies = {
       "rafamadriz/friendly-snippets",
-      -- add blink.compat to dependencies
       {
         "saghen/blink.compat",
-        optional = true, -- make optional so it's only enabled if any extras need it
+        optional = true,
         opts = {},
         version = not vim.g.lazyvim_blink_main and "*",
       },
     },
-    event = "InsertEnter",
+    event = { "InsertEnter", "CmdlineEnter" },
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
@@ -29,17 +28,11 @@ return {
         end,
       },
       appearance = {
-        -- sets the fallback highlight groups to nvim-cmp's highlight groups
-        -- useful for when your theme doesn't support blink.cmp
-        -- will be removed in a future release, assuming themes add support
         use_nvim_cmp_as_default = false,
-        -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        -- adjusts spacing to ensure icons are aligned
         nerd_font_variant = "mono",
       },
       completion = {
         accept = {
-          -- experimental auto-brackets support
           auto_brackets = {
             enabled = true,
           },
@@ -57,17 +50,26 @@ return {
           enabled = false,
         },
       },
-      -- experimental signature help support
-      -- signature = { enabled = true },
       cmdline = {
-        sources = {
-          -- adding any nvim-cmp sources here will enable them
-          -- with blink.compat
-          compat = {},
-          default = { "lsp", "path", "snippets", "buffer" },
+        enabled = true,
+        keymap = {
+          preset = "cmdline",
+          ["<Up>"] = { "select_prev", "fallback" },
+          ["<Down>"] = { "select_next", "fallback" },
+          ["<C-k>"] = { "select_prev", "fallback" },
+          ["<C-j>"] = { "select_next", "fallback" },
+          ["<CR>"] = { "accept", "fallback" },
+        },
+        completion = {
+          list = { selection = { preselect = false } },
+          menu = {
+            auto_show = function(ctx)
+              return vim.fn.getcmdtype() == ":"
+            end,
+          },
+          ghost_text = { enabled = true },
         },
       },
-      --NOTE: disabling LazyVim's default map ('enter' for completion)
       keymap = {
         preset = "default",
         ["<C-y>"] = { "select_and_accept" },
