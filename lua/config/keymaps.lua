@@ -18,3 +18,13 @@ vim.keymap.set("n", "<leader>sf", function()
   -- F for "Fixed" string search
   require("telescope.builtin").live_grep({ additional_args = { "-F" } })
 end, { desc = "[S]earch [F]ixed String in Files" })
+
+-- Toggle semicolon at end of line
+vim.keymap.set("n", ";;", function()
+  local line = vim.api.nvim_get_current_line()
+  if line:sub(-1) == ";" then
+    vim.api.nvim_set_current_line(line:sub(1, -2))
+  else
+    vim.api.nvim_set_current_line(line .. ";")
+  end
+end, { noremap = true, silent = true, desc = "Toggle semicolon at end of line" })

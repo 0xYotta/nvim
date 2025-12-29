@@ -1,0 +1,1 @@
+-- Rust-specific settings (semicolon toggle moved to global keymaps)
