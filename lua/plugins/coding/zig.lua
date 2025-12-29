@@ -4,7 +4,7 @@ return {
     opts = {
       servers = {
         zls = {
-          cmd = { "/Users/bogdandegtyarev/.zig/zls" },
+          cmd = { "/Users/bogdandegtyarev/.zvm/bin/zls" },
         },
       },
     },
